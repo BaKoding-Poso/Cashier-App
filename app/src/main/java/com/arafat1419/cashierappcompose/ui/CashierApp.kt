@@ -13,7 +13,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
@@ -28,12 +27,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.arafat1419.cashierappcompose.R
+import com.arafat1419.cashierappcompose.ui.screen.cashier.CashierScreen
 import com.arafat1419.cashierappcompose.ui.screen.dashboard.DashboardScreen
 import com.arafat1419.cashierappcompose.ui.screen.history.HistoryScreen
 import com.arafat1419.cashierappcompose.ui.screen.navigation.NavigationItem
 import com.arafat1419.cashierappcompose.ui.screen.navigation.Screen
 import com.arafat1419.cashierappcompose.ui.screen.settings.SettingsScreen
-import com.arafat1419.cashierappcompose.ui.screen.transaction.TransactionScreen
 import com.arafat1419.cashierappcompose.ui.theme.CashierAppComposeTheme
 
 @Composable
@@ -69,7 +68,7 @@ fun CashierApp(
                     DashboardScreen()
                 }
                 composable(Screen.Transaction.route) {
-                    TransactionScreen()
+                    CashierScreen()
                 }
                 composable(Screen.History.route) {
                     HistoryScreen()
@@ -106,7 +105,7 @@ fun CashierNavigationRail(
         ),
         NavigationItem(
             title = stringResource(R.string.history),
-            icon = Icons.Outlined.History,
+            icon = Icons.Outlined.ListAlt,
             screen = Screen.History,
             position = 0,
         ),

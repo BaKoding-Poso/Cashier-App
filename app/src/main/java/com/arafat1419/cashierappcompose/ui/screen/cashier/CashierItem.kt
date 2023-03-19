@@ -1,4 +1,4 @@
-package com.arafat1419.cashierappcompose.ui.components
+package com.arafat1419.cashierappcompose.ui.screen.cashier
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -20,7 +20,7 @@ import com.arafat1419.cashierappcompose.R
 import com.arafat1419.cashierappcompose.ui.theme.CashierAppComposeTheme
 
 @Composable
-fun StuffItem(
+fun CashierItem(
     modifier: Modifier = Modifier
 ) {
     val listOfCategories = arrayListOf("Pcs", "Paku")
@@ -33,7 +33,7 @@ fun StuffItem(
         modifier = modifier
             .fillMaxWidth()
             .wrapContentHeight()
-            .clickable {  },
+            .clickable { },
     ) {
         Column(
             verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -87,6 +87,6 @@ fun StuffItem(
 @Composable
 private fun ActiveFilterItemPreview() {
     CashierAppComposeTheme {
-        StuffItem()
+        CashierItem()
     }
 }

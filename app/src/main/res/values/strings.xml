@@ -8,4 +8,6 @@
     <string name="close">Close</string>
     <string name="delete_all">Delete All</string>
     <string name="delete">Delete</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
 </resources>
